@@ -4,9 +4,14 @@ import headerBg from "../../assets/PNGs/Header-Bg.png";
 
 const Hero = () => {
   return (
-    <header className="container-fluid" style={{ minHeight: "100vh" }}>
+    <header className="container-fluid">
       <div className="bg-image">
-        <img src={headerBg} className="d-flex ms-auto" alt="Header background" />
+        <img
+          src={headerBg}
+          className="d-flex ms-auto"
+          style={{ minHeight: "100vh !important" }}
+          alt="Header background"
+        />
         <div className="mask">
           <nav className="navbar navbar-light shadow-none mt-4">
             <div className="container-fluid">
@@ -20,7 +25,7 @@ const Hero = () => {
             </div>
           </nav>
 
-          <div className="header-content text-center">
+          <div className="header-content text-center mt-5 mb-5">
             <span className="dm-sans fw-bold text-black bg-light px-3 py-2 rounded-6">
               Coming Soon! 🎉
             </span>

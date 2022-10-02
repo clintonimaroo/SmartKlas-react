@@ -24,11 +24,17 @@ button {
   color: #9f9a9a;
 }
 
-.header-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.header-bg {
+  pointer-events: none;
+  position: absolute;
+  width: 100vw;
+  overflow-y: hidden;
+  height: 100vh;
+  z-index: -1;
+}
+
+.bg-image, .mask {
+  height: 100vh !important;
 }
 
 .dm-sans {
@@ -51,7 +57,7 @@ input {
 
 .input-group-xl {
   height: 3.5rem;
-  width: 40rem;
+  max-width: 40rem;
 }
 
 .remove-outline,
