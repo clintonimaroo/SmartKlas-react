@@ -12,8 +12,12 @@ button {
   border-radius: 1.25rem;
 }
 
-.header-title {
-  font-size: 4rem;
+.primary-blue {
+  color: #0074ff;
+}
+
+.bg-primary-blue {
+  background-color: #0074ff !important;
 }
 
 .bg-light {
@@ -33,7 +37,8 @@ button {
   z-index: -1;
 }
 
-.bg-image, .mask {
+.bg-image,
+.mask {
   height: 100vh !important;
 }
 
@@ -51,13 +56,8 @@ button {
 }
 
 input {
-  height: 3.5rem !important;
+  height: 60px !important;
   font-family: "DM Sans", sans-serif;
-}
-
-.input-group-xl {
-  height: 3.5rem;
-  max-width: 40rem;
 }
 
 .remove-outline,
@@ -73,9 +73,16 @@ input {
   background: url(./assets/PNGs/community.png);
   background-size: cover;
   background-position: center;
-  min-height: 50vh;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.icon::after {
+  content: "";
+  z-index: -1;
+  height: 100%;
+  border-left: 2px dotted #c7c1c1;
 }
