@@ -9,11 +9,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-spring/web": "^9.5.5",
     "firebase": "^9.13.0",
     "react": "^18.2.0",
+    "react-confirm-alert": "^3.0.6",
     "react-dom": "^18.2.0",
+    "react-modal": "^3.16.1",
+    "react-overlays": "^5.2.1",
     "react-router-dom": "^6.4.1",
-    "react-web-share": "^2.0.2"
+    "react-web-share": "^2.0.2",
+    "sweetalert2": "^11.6.9",
+    "sweetalert2-react-content": "^5.0.7"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",

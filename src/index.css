@@ -8,6 +8,13 @@ button {
   font-family: "DM Sans", sans-serif !important;
 }
 
+.bg {
+  background: url(assets/PNGs/background_circles.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .rounded-10 {
   border-radius: 1.25rem;
 }
@@ -56,8 +63,12 @@ button {
 }
 
 input {
-  height: 60px !important;
+  min-height: 60px !important;
   font-family: "DM Sans", sans-serif;
+}
+
+.wait-btn {
+  min-height: 60px !important;
 }
 
 .remove-outline,
@@ -85,4 +96,15 @@ input {
   z-index: -1;
   height: 100%;
   border-left: 2px dotted #c7c1c1;
+}
+
+.equal {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+}
+
+.backdrop-blur {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(0.3rem);
 }

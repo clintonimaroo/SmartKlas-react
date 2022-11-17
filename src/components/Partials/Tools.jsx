@@ -5,7 +5,8 @@ import office from "../../assets/PNGs/tools/office.png";
 import lazerpay from "../../assets/PNGs/tools/lazerpay.png";
 import kahoot from "../../assets/PNGs/tools/kahoot.png";
 import github from "../../assets/PNGs/tools/github.png";
-import butterfly from "../../assets/PNGs/tools/butterfly.png";
+import twikey from "../../assets/PNGs/tools/twikey.png";
+import netsupport from "../../assets/PNGs/tools/netsupport.png";
 
 const Tools = () => {
   return (
@@ -40,7 +41,7 @@ const Tools = () => {
         </div>
         <div className="tools-three">
           <div className="butterfly">
-            <img src={butterfly} alt="Butterfly" />
+            <img src={twikey} alt="Butterfly" />
           </div>
 
           <div className="github">
