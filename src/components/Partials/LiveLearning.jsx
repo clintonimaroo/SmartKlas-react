@@ -1,6 +1,5 @@
 import React from "react";
 import office from "../../assets/JPGs/office.png";
-import one from "../../assets/PNGs/one.png";
 
 const LiveLearning = () => {
   return (
@@ -33,6 +32,7 @@ const LiveLearning = () => {
                   >
                     <span className="text-white fw-bold fs-4 dm-sans">1</span>
                   </div>
+                  <span className="border border-1" style={{ height: "100%" }}></span>
 
                   <div
                     className="icon d-lg-block d-none"

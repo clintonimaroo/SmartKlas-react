@@ -147,7 +147,6 @@ const Features = () => {
                 alt="Kahoot"
                 style={{ height: "70px" }}
               />
-
               <h5 className="dm-sans text-dark mb-3">Kahoot!</h5>
               <p className="dm-sans text-super-light">
                 NetSupport School is the market-leading and most feature-rich

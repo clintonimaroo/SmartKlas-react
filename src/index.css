@@ -91,12 +91,12 @@ input {
   justify-content: center;
 }
 
-.icon::after {
+/* .icon::after {
   content: "";
   z-index: -1;
   height: 100%;
   border-left: 2px dotted #c7c1c1;
-}
+} */
 
 .equal {
   display: flex;

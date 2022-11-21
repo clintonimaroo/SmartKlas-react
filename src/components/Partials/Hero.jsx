@@ -2,11 +2,11 @@ import { useState, useId } from "react";
 import { confirmAlert } from "react-confirm-alert"; // Import
 import "react-confirm-alert/src/react-confirm-alert.css";
 import smartklasLogo from "../../assets/PNGs/logo.png";
-import { db } from "../../firebase";
-import { set, ref as sRef } from "firebase/database";
 import withReactContent from "sweetalert2-react-content";
 import Swal from "sweetalert2";
 import Modal from "./Modal";
+import { db } from "../../firebase";
+import { addDoc, collection, doc, getDoc } from "firebase/firestore";
 
 const MySwal = withReactContent(Swal);
 
@@ -41,6 +41,7 @@ const Hero = () => {
   const id = useId();
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
+  const emailCollectionRef = collection(db, "waitlist_emails");
 
   function ValidateEmail(email) {
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
@@ -50,12 +51,26 @@ const Hero = () => {
   }
 
   const handleSubmit = async () => {
-    submit();
-    if (!ValidateEmail(email)) return setError("Invalid email address");
-    set(sRef(db, `/${id}`), {
-      email,
-      id,
-    });
+    const emailDoc = doc(emailCollectionRef, email);
+    const emailSnap = await getDoc(emailDoc);
+
+    if (!emailSnap.exists()) {
+      const newEmail = email;
+      const createdAt = new Date();
+
+      try {
+        await addDoc(emailDoc, {
+          email: newEmail,
+          createdAt,
+        });
+        submit();
+      } catch (_err) {
+        console.log("====================================");
+        console.log(_err);
+        console.log("====================================");
+        setError("Internal server error");
+      }
+    }
   };
 
   return (
